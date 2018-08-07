@@ -1,0 +1,6 @@
+dino_says: 
+  path: /shoutbox
+  defaults:
+    _controller: Drupal\shoutbox\Controller\ShoutboxController::create_page
+  requirements: 
+    _permission: 'access content'

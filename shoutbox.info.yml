@@ -1,0 +1,5 @@
+name: Shoutbox
+type: module
+description: "A port of the D7 Shoutbox"
+package: Sample
+core: 8.x
