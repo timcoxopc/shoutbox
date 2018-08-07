@@ -1,0 +1,34 @@
+<?php
+
+function shoutbox_schema() {
+  $schema['shoutbox'] = array(
+    'description' => 'The base table for messages.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a .',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'timestamp' => array(
+        'description' => 'A timestamp of when this record was created',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ),
+      'name' => array(
+        'description' => 'The name of the person who created the message',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ),
+      'message' => array(
+        'description' => 'A message',
+        'type' => 'blob',
+        'size' => 'big'
+      )
+    ),
+    'primary key' => ['id'],
+  );
+  return $schema;
+}
