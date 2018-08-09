@@ -1,6 +1,21 @@
-dino_says: 
+shoutbox.view: 
   path: /shoutbox
   defaults:
-    _controller: Drupal\shoutbox\Controller\ShoutboxController::create_page
+    _title: Form
+    _form: Drupal\shoutbox\Form\ShoutboxForm
+  requirements: 
+    _permission: 'access content'
+#shoutbox.admin: 
+#  path: /admin/shoutbox
+#  defaults:
+#    _controller: Drupal\shoutbox\Controller\ShoutboxController::createAdminPage
+#    _title: Shoutbox admin
+#  requirements: 
+#    _permission: 'administer'
+shoutbox.admin: 
+  path: /admin/shoutbox
+  defaults:
+    _title: Form
+    _form: Drupal\shoutbox\Form\ShoutboxAdminForm
   requirements: 
     _permission: 'access content'
